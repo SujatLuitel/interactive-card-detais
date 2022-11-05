@@ -56,8 +56,8 @@ function inputNumber() {
 
 function allFunct() {
     date();
-    year();
     month();
+    year();
 }
 function date() {
     expDateShow.innerHTML = expiry[0].value + '/' + expiry[1].value;
