@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+
+      <div class="card-front">
+          <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+        <span class="card-number" id="card-number-main">0000 0000 0000 0000</span>
+        <div class="name-date">
+          <span class="acc-holder" id="cardholder-main">Jane Appleseed</span>
+          <span class="exp-date" id="exp-date-main">00/0000</span>
+        </div>
+      </div>
+
+      <div class="card-back">
+        <span class="cvc" id="cvc-main">000</span>
+      </div>
+    </div>
+
+    <div class="form" id="form">
+      <form>
+        <div class="row">
+          <label for="cardholder name">Cardholder name</label>
+          <input type="text" oninput="inputName()" id="cardholder" placeholder="e.g. Jane Appleseed">
+          <p class="err-msg" id="err-name"></p>
+        </div>
+        <div class="row">
+          <label for="card number"> Card number</label>
+          <input type="text" oninput="inputNumber()" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+          <p class="err-msg" id="err-number"></p>
+        </div>
+        
+        <div class="date-cvc">
+          <div class="date">
+            <label for="exp-date">Exp. date (MM/YY) </label>
+            <div>
+              <input type="text" id="month" class="expiry" placeholder="MM" oninput="allFunct()">
+              <input type="text" id="year" class="expiry" placeholder="YY" oninput="allFunct()">
+            </div>
+            <p class="err-msg" id="err-month"></p>
+            <p class="err-msg" id="err-year"></p>
+          </div>
+          <div class="cvc">
+            <label for="cvc">CVC </label>
+            <input type="text" id="cvc" placeholder="e.g. 123" oninput="cvcF()">
+            <p class="err-msg" id="err-cvc"></p>
+          </div>
+        </div>
+      </form>
+      <button id="confirm" class="button">Comfirm</button>
+    </div>
+    <div class="thankyou-body hidden" id="thankyou">
+      <img src="./images/icon-complete.svg" alt="icon-complete">
+      <span>Thank you!</span>
+      <p>We've added your card details</p>
+      <button class="button" onclick="location.href='index.html';" id="continue">Continue</button>
+    </div>
+    <div class="attribution">
+      <span>Challenge by <br><a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </span>
+      <span>Coded by <br><a href="/index.html">Sujat Luitel</a>.</span>
+    </div>
+  </div>
+</body>
+</html>
