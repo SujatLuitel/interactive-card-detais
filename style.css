@@ -278,6 +278,7 @@ form{
   }
   .form{
     padding-inline: 2em;
+    padding-top: 3em;
     width: 100%;
   }
   input{
